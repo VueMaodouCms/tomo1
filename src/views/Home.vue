@@ -1,7 +1,10 @@
 <template>
   <div id="home">
     <h1>{{ currentText }}</h1>
-    <h2>{{ timetext }}</h2>
+    <!-- <h2>{{ timetext }}</h2> -->
+    <radial-progress-bar :diameter="400" :completed-steps="timeleft" :total-steps="totalSteps">
+      <h2>{{ timetext }}</h2>
+    </radial-progress-bar>
     <b-btn variant="primary" v-if="status != 1" @click="start">
       <font-awesome-icon :icon="['fas', 'play']"></font-awesome-icon>
     </b-btn>
@@ -22,7 +25,8 @@ export default {
       // 1 = 播放
       // 2 = 暫停
       status: 0,
-      timer: 0
+      timer: 0,
+      totalSteps: 5
     }
   },
   computed: {
@@ -49,12 +53,14 @@ export default {
   },
   methods: {
     start () {
+      // this.completedSteps = this.timetext
+      // this.totalSteps = parseInt(process.env.VUE_APP_TIMELEFT)
       if (this.status === 2) {
         // 暫停後繼續
         this.status = 1
         this.timer = setInterval(() => {
           this.$store.commit('countdown')
-          if (this.timeleft <= 0) {
+          if (this.timeleft < 0) {
             this.finish(false)
           }
         }, 1000)
@@ -65,7 +71,7 @@ export default {
           this.status = 1
           this.timer = setInterval(() => {
             this.$store.commit('countdown')
-            if (this.timeleft <= 0) {
+            if (this.timeleft < 0) {
               this.finish(false)
             }
           }, 1000)
