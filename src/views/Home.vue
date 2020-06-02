@@ -2,7 +2,7 @@
   <div id="home">
     <h1>{{ currentText }}</h1>
     <!-- <h2>{{ timetext }}</h2> -->
-    <radial-progress-bar :diameter="400" :completed-steps="timeleft" :total-steps="totalSteps">
+    <radial-progress-bar :diameter="400" :completed-steps="timeleft" :total-steps="totalSteps" :startColor="startColor" :stopColor="stopColor">
       <h2>{{ timetext }}</h2>
     </radial-progress-bar>
     <b-btn variant="primary" v-if="status != 1" @click="start">
@@ -26,7 +26,9 @@ export default {
       // 2 = 暫停
       status: 0,
       timer: 0,
-      totalSteps: 5
+      totalSteps: 5,
+      startColor: '#42adff',
+      stopColor: '#4ce6b8'
     }
   },
   computed: {
