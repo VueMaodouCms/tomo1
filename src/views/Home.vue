@@ -1,19 +1,25 @@
 <template>
   <div id="home">
-    <h1>{{ currentText }}</h1>
-    <!-- <h2>{{ timetext }}</h2> -->
-    <radial-progress-bar :diameter="400" :completed-steps="timeleft" :total-steps="totalSteps" :startColor="startColor" :stopColor="stopColor">
-      <h2>{{ timetext }}</h2>
-    </radial-progress-bar>
-    <b-btn variant="primary" v-if="status != 1" @click="start">
-      <font-awesome-icon :icon="['fas', 'play']"></font-awesome-icon>
-    </b-btn>
-    <b-btn variant="primary" v-if="status == 1" @click="pause">
-      <font-awesome-icon :icon="['fas', 'pause']"></font-awesome-icon>
-    </b-btn>
-    <b-btn variant="primary" v-if="current.length > 0 || todos.length > 0" @click="finish(true)">
-      <font-awesome-icon :icon="['fas', 'step-forward']"></font-awesome-icon>
-    </b-btn>
+    <div class="row d-flex flex-nowrap ">
+      <div class="col-12">
+        <h1>{{ currentText }}</h1>
+        <!-- <h2>{{ timetext }}</h2> -->
+        <radial-progress-bar :diameter="400" :completed-steps="timeleft" :total-steps="totalSteps" :startColor="startColor" :stopColor="stopColor">
+          <h2>{{ timetext }}</h2>
+        </radial-progress-bar>
+        <div class="col-12 mr-5">
+          <b-btn variant="transparent" v-if="status != 1" @click="start">
+            <img src="../assets/play.svg">
+          </b-btn>
+          <b-btn variant="transparent" v-if="status == 1" @click="pause">
+            <img src="../assets/pause.svg">
+          </b-btn>
+          <b-btn variant="transparent" v-if="current.length > 0 || todos.length > 0" @click="finish(true)">
+            <img src="../assets/next.svg">
+          </b-btn>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 

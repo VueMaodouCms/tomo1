@@ -2,7 +2,7 @@
   <div id="settings">
     <b-table :items="items" :fields="fields" @row-clicked="selectAlarm">
       <template v-slot:cell(preview)="data">
-        <av-line :line-width="2" line-color="lime" :src="'./alarms/'+data.item.file"
+        <av-line :line-width="2" :line-color="['#42adff', '#4ce6b8']" :audio-src="'./alarms/'+data.item.file"
     ></av-line>
         <!-- <audio controls :src="'./alarms/'+data.item.file"></audio> -->
       </template>
