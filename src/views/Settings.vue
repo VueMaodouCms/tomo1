@@ -1,5 +1,5 @@
 <template>
-  <div id="settings">
+  <div id="settings" class="">
     <b-table :items="items" :fields="fields" @row-clicked="selectAlarm">
       <template v-slot:cell(preview)="data">
         <av-line :line-width="2" :line-color="['#42adff', '#4ce6b8']" :audio-src="'./alarms/'+data.item.file"

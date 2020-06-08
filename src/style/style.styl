@@ -1,9 +1,16 @@
-body
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  }
+body,
+html
   font-family var(--font-family-sans-serif), "Noto Sans TC"
   height 100%
 
 #app
-  height 100vh
+  height 100%
   display flex
   justify-content center
   align-items center
@@ -16,6 +23,7 @@ body
 
 #home h1
   color white
+  margin: 0
 
 #home img 
   width 60px
@@ -24,8 +32,11 @@ body
   display flex
   justify-content center
   align-items center
+  width 100%
   background #E96D6D
-  height 8%
+  position absolute
+  bottom: 0
+  // height 8%
   font-size 50px
 
 #nav a

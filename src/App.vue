@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-    <div id="nav" class="fixed-bottom">
+  <div id="app" class="container-fluid p-0">
+    <div id="nav" class="">
       <div class="row">
         <div class="col">
           <router-link to="/"><font-awesome-icon :icon="['fas', 'clock']"></font-awesome-icon></router-link>

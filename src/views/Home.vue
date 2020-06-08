@@ -1,13 +1,13 @@
 <template>
   <div id="home">
-    <div class="row d-flex flex-nowrap ">
-      <div class="col-12">
+    <div class="row d-flex">
+      <div class="col">
         <h1>{{ currentText }}</h1>
         <!-- <h2>{{ timetext }}</h2> -->
-        <radial-progress-bar :diameter="400" :completed-steps="timeleft" :total-steps="totalSteps" :startColor="startColor" :stopColor="stopColor">
+        <radial-progress-bar class="m-auto" :diameter="300" :completed-steps="timeleft" :total-steps="totalSteps" :startColor="startColor" :stopColor="stopColor">
           <h2>{{ timetext }}</h2>
         </radial-progress-bar>
-        <div class="col-12 mr-5">
+        <div class="col mr-5">
           <b-btn variant="transparent" v-if="status != 1" @click="start">
             <img src="../assets/play.svg">
           </b-btn>
