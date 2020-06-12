@@ -14,7 +14,9 @@
       </div>
     </div>
     <keep-alive>
-      <router-view />
+      <vue-page-transition>
+        <router-view />
+      </vue-page-transition>
     </keep-alive>
   </div>
 </template>

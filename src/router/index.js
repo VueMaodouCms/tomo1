@@ -10,7 +10,8 @@ const routes = [
     name: 'Home',
     component: Home,
     meta: {
-      title: '番茄鐘'
+      title: '番茄鐘',
+      transition: 'fade'
     }
   },
   {
@@ -21,7 +22,8 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/List.vue'),
     meta: {
-      title: '番茄鐘 | 清單'
+      title: '番茄鐘 | 清單',
+      transition: 'fade'
     }
   },
   {
@@ -32,7 +34,8 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/Settings.vue'),
     meta: {
-      title: '番茄鐘 | 設定'
+      title: '番茄鐘 | 設定',
+      transition: 'fade'
     }
   },
   {
@@ -40,7 +43,8 @@ const routes = [
     name: 'NotFound',
     component: () => import(/* webpackChunkName: "about" */ '../views/NotFound.vue'),
     meta: {
-      title: '番茄鐘 | 404'
+      title: '番茄鐘 | 404',
+      transition: 'fade'
     }
   }
 ]

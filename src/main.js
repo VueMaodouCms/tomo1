@@ -19,11 +19,14 @@ import AudioVisual from 'vue-audio-visual'
 import VueAnalytics from 'vue-analytics'
 import VueSweetalert2 from 'vue-sweetalert2'
 import 'sweetalert2/dist/sweetalert2.min.css'
+import VuePageTransition from 'vue-page-transition'
 Vue.use(VueSweetalert2)
 
 Vue.use(VueAnalytics, {
   id: 'UA-168243644-1'
 })
+
+Vue.use(VuePageTransition)
 
 library.add(faCheck, faPen, faTimes, faUndo, faSave, faPlayCircle, faPause, faStepForward, faClock, faListUl, faBell)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
