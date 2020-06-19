@@ -1,52 +1,63 @@
 * {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
   }
 body,
 html
-  font-family var(--font-family-sans-serif), "Noto Sans TC"
   height 100%
 
 #app
   height 100%
   display flex
-  justify-content center
-  align-items center
   text-align center
+  flex-direction column
+  justify-content space-between
   background #FF9BBA
 
 #home h2
-  font-size 80px
+  font-size 70px
   color white
 
 #home h1
+  font-size 80px
   color white
-  margin: 0
+  margin-bottom: 30px
 
 #home img 
   width 60px
   margin 0 2rem
+
 #nav
-  display flex
-  justify-content center
-  align-items center
   width 100%
   background #E96D6D
+  display: flex;
+  justify-content: space-around;
   position absolute
-  bottom: 0
-  // height 8%
+  padding 0
+  bottom 0
   font-size 50px
 
 #nav a
   color white
 
-// @media (max-width: 576px)
-// audio
-//   width 120px
-//   height 50px
+#list .table thead th
+  background-color #E96D6D
+  border none
+  color white
+
 
 #setting
   width 100vw
   height 100vh
+  text-align center
+
+#settings .table thead th
+  background-color #E96D6D
+  border none
+  color white
+
+
+

@@ -1,22 +1,14 @@
 <template>
-  <div id="app" class="container-fluid p-0">
-    <div id="nav" class="">
-      <div class="row">
-        <div class="col">
-          <router-link to="/"><font-awesome-icon :icon="['fas', 'clock']"></font-awesome-icon></router-link>
-        </div>
-        <div class="col mx-5">
-          <router-link to="/list"><font-awesome-icon :icon="['fas', 'list-ul']"></font-awesome-icon></router-link>
-        </div>
-        <div class="col">
-          <router-link to="/settings"><font-awesome-icon :icon="['fas', 'bell']"></font-awesome-icon></router-link>
-        </div>
-      </div>
-    </div>
-    <keep-alive>
+  <div id="app">
+        <keep-alive>
       <vue-page-transition>
         <router-view />
       </vue-page-transition>
     </keep-alive>
+    <div id="nav" class="">
+      <router-link to="/"><font-awesome-icon :icon="['fas', 'clock']"></font-awesome-icon></router-link>
+      <router-link to="/list"><font-awesome-icon :icon="['fas', 'list-ul']"></font-awesome-icon></router-link>
+      <router-link to="/settings"><font-awesome-icon :icon="['fas', 'bell']"></font-awesome-icon></router-link>
+    </div>
   </div>
 </template>
